@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'MarkOT';
+  src: url('/assets/fonts/MarkOT.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MarkOT-Bold';
+  src: url('/assets/fonts/MarkOT-Bold.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MarkOT-Book';
+  src: url('/assets/fonts/MarkOT-Book.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MarkOT-Regular';
+  src: url('/assets/fonts/MarkOT-Regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MarkOT-Thin';
+  src: url('/assets/fonts/MarkOT-Thin.otf') format('truetype');
+}
+
+
+:root {
+  font-family: 'MarkOT', sans-serif;
+}
+
+.cont{
+  font-family: 'MarkOT-Regular',sans-serif;
+}
+
+.fbold{
+  font-family: 'MarkOT-Bold',sans-serif;
+}
+
+.fbook{
+  font-family: 'MarkOT-Book',sans-serif;
+}
+
+.fregular{
+  font-family: 'MarkOT-Regular',sans-serif;
+}
+
+.fthin{
+  font-family: 'MarkOT-Thin',sans-serif;
+}
+
+.head{
+  @apply fbook font-semibold text-4xl text-main_color
+}
+
+

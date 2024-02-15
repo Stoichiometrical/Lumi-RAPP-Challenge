@@ -39,7 +39,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="relative  m-0">
+      <section className="relative  m-0">
         <img
           src={isMobile ? home_mobile : home_herp}
           className="object-cover w-full"
@@ -61,17 +61,17 @@ function App() {
             <Button text="GET STARTED" />
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="flex md:flex-row flex-col">
+      <section className="flex md:flex-row flex-col">
         <div className="md:w-1/2 w-full p-4 md:p-0">
-          <img src={baby} alt="Photo Missing" className=" " />
+          <img src={baby} alt="Photo Missing" />
         </div>
 
         <div className="flex  md:items-center md:justify-center  justify-start px-4">
           <div className="flex flex-col md:w-3/5 gap-3 ">
             <div className="head text-center">How it works</div>
-            <div className="">
+            <div>
               <div className="font-bold">Lumi’s A, B, Cs, to better Zzzzs</div>
               <div className="pb-3">
                 <span className="text-main_color font-bold">A.</span>
@@ -97,9 +97,9 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="flex md:flex-row flex-col-reverse my-6 md:my-0 ">
+      <section className="flex md:flex-row flex-col-reverse my-6 md:my-0 ">
         <div className="flex md:items-center md:justify-center  px-5">
           <div className="flex flex-col md:items-center justify-center gap-3 mt-4  mb-5">
             <div className="head text-2xl">Our Mission</div>
@@ -114,10 +114,14 @@ function App() {
           </div>
         </div>
         <img src={baby2} alt="Photo Missing" className="md:w-1/2 w-full" />
-      </div>
+      </section>
 
-      <div className="flex md:flex-row flex-col ">
-        <img src={baby3} alt="" className="hidden md:flex md:w-1/2 w-full" />
+      <section className="flex md:flex-row flex-col ">
+        <img
+          src={baby3}
+          alt="Photo"
+          className="hidden md:flex md:w-1/2 w-full"
+        />
 
         <div className="flex flex-col md:justify-center md:items-center gap-4 my-5 px-6">
           <div className="fbook font-semibold text-3xl text-main_color">
@@ -133,9 +137,9 @@ function App() {
           </div>
           <Button />
         </div>
-      </div>
+      </section>
 
-      <div className="flex flex-col items-center my-5 w-full mb-16 ">
+      <section className="flex flex-col items-center my-5 w-full mb-16 ">
         <div className="flex  flex-col  md:w-2/5  px-5">
           <div className="text-main_color fbook text-3xl md:text-2xl  py-4   w-full text-center md:text-start ">
             We’re here to answer your questions
@@ -149,7 +153,7 @@ function App() {
             <Button />
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

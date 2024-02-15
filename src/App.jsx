@@ -6,8 +6,22 @@ import baby from "./assets/Images/how-it-works-desktop.jpg";
 import baby2 from "./assets/Images/our-mission.jpg";
 import baby3 from "./assets/Images/lumi-designed-for.jpg";
 import DropdownItem from "./components/DropdownItem.jsx";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Update state on image load
+  const handleImageLoad = () => {
+    setIsMobile(window.innerWidth < 768);
+  };
+
+  // Update on resize
+  useEffect(() => {
+    window.addEventListener("resize", handleImageLoad);
+    return () => window.removeEventListener("resize", handleImageLoad);
+  }, []);
+
   const faqQuestions = [
     "What is baby sleep training?",
     "Does the Lumi Smart Sleep Coach app work?",
@@ -25,10 +39,15 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="relative h-auto">
-        <img src={home_herp} className="object-cover" alt="background" />
-        <div className="absolute w-1/4 flex flex-col gap-2 top-1/3  right-28">
-          <div className="rounded-xl home-tank bg-neutral-950 bg-opacity-55 p-4 text-white">
+      <div className="relative  m-0">
+        <img
+          src={isMobile ? home_mobile : home_herp}
+          className="object-cover w-full"
+          alt="background"
+          onLoad={handleImageLoad} // Set initial screen state on image load
+        />
+        <div className="absolute md:w-1/4 flex flex-col gap-2 md:top-60  top-80 px-5 md:right-28">
+          <div className="rounded-xl home-tank bg-neutral-950 bg-opacity-40 p-4 text-white">
             <div className="cont text-3xl">
               Your baby can be a super sleeper
             </div>
@@ -38,52 +57,53 @@ function App() {
             </div>
           </div>
 
-          <div className="">
+          <div className=" ml-2 mr-4  ">
             <Button text="GET STARTED" />
           </div>
         </div>
       </div>
 
-      <div className="flex">
-        <div className="w-1/2">
+      <div className="flex md:flex-row flex-col">
+        <div className="md:w-1/2 w-full p-4 md:p-0">
           <img src={baby} alt="Photo Missing" className=" " />
         </div>
 
-        <div className="flex  items-center justify-center">
-          <div className="flex flex-col justify-center items-center gap-3">
-            <div className="head">How it works</div>
+        <div className="flex  md:items-center md:justify-center  justify-start px-4">
+          <div className="flex flex-col md:w-3/5 gap-3 ">
+            <div className="head text-center">How it works</div>
             <div className="">
               <div className="font-bold">Lumi’s A, B, Cs, to better Zzzzs</div>
-              <div className="">
-                <span className="text-main_color">A.</span>
-                We coach. Our Pediatric sleep experts will take you step-by-step
-                to sleep success
+              <div className="pb-3">
+                <span className="text-main_color font-bold">A.</span>
+                <b>We coach.</b> Our Pediatric sleep experts will take you
+                step-by-step to sleep success
               </div>
-              <div className="">
-                <span className="text-main_color">B.</span>
-                You log. Record your baby’s sleeps directly within the app
+              <div className="pb-3">
+                <span className="text-main_color font-bold">B.</span>
+                <b>You log.</b> Record your baby’s sleeps directly within the
+                app
               </div>
-              <div className="">
-                <span className="text-main_color">C.</span>
-                We analyze. Daily and weekly sleep insight reports measure your
-                baby’s progress
+              <div className="pb-3">
+                <span className="text-main_color font-bold">C.</span>
+                <b>We analyze.</b> Daily and weekly sleep insight reports
+                measure your baby’s progress
               </div>
             </div>
             <div className="text-main_color font-bold">
               Zzzzz your baby sleeps!
             </div>
-            <div className="">
+            <div className="flex w-full items-center justify-center ">
               <Button />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="flex">
-        <div className="flex items-center justify-center">
-          <div className="flex flex-col items-center justify-center gap-3">
-            <div className="head">Our Mission</div>
-            <div className="w-3/4">
+      <div className="flex md:flex-row flex-col-reverse my-6 md:my-0 ">
+        <div className="flex md:items-center md:justify-center  px-5">
+          <div className="flex flex-col md:items-center justify-center gap-3 mt-4  mb-5">
+            <div className="head text-2xl">Our Mission</div>
+            <div className="md:w-3/4 w-full">
               We’re on a mission to make it easy for every family to sleep
               better. We apply state-of-the-art technology to science-based
               sleep understanding so that we can make quality, credible sleep
@@ -93,17 +113,17 @@ function App() {
             <Button text="UNLOCK BETTER SLEEP" />
           </div>
         </div>
-        <img src={baby2} alt="Photo Missing" className="w-1/2" />
+        <img src={baby2} alt="Photo Missing" className="md:w-1/2 w-full" />
       </div>
 
-      <div className="flex">
-        <img src={baby3} alt="" className="w-1/2" />
+      <div className="flex md:flex-row flex-col ">
+        <img src={baby3} alt="" className="hidden md:flex md:w-1/2 w-full" />
 
-        <div className="flex flex-col justify-center items-center gap-4">
-          <div className="fbook font-semibold text-4xl text-main_color">
+        <div className="flex flex-col md:justify-center md:items-center gap-4 my-5 px-6">
+          <div className="fbook font-semibold text-3xl text-main_color">
             Lumi is designed for
           </div>
-          <div className="fbook text-start text-lg w-3/4">
+          <div className="fbook text-start text-lg md:w-3/4">
             <b>
               Every parent who wants their baby to fall asleep, stay asleep, and
               wake up happy in the morning
@@ -115,19 +135,20 @@ function App() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center my-5  ">
-        <div className="flex  flex-col  ">
-          <div className="text-main_color fbook text-2xl  py-4">
+      <div className="flex flex-col items-center my-5 w-full mb-16 ">
+        <div className="flex  flex-col  md:w-2/5  px-5">
+          <div className="text-main_color fbook text-3xl md:text-2xl  py-4   w-full text-center md:text-start ">
             We’re here to answer your questions
           </div>
-          <div className="ml-2">
+          <div className="md:ml-2 px-3">
             {faqQuestions.map((text, index) => (
               <DropdownItem key={index} text={text} />
             ))}
           </div>
+          <div className="w-full   md:items-center justify-center mt-5 flex">
+            <Button />
+          </div>
         </div>
-
-        <Button />
       </div>
     </>
   );

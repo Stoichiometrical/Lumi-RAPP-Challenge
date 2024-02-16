@@ -4,27 +4,27 @@
 
 @font-face {
   font-family: 'MarkOT';
-  src: url('/assets/fonts/MarkOT.otf') format('truetype');
+  src: url('/fonts/MarkOT.otf') format('truetype');
 }
 
 @font-face {
   font-family: 'MarkOT-Bold';
-  src: url('/assets/fonts/MarkOT-Bold.otf') format('truetype');
+  src: url('/fonts/MarkOT-Bold.otf') format('truetype');
 }
 
 @font-face {
   font-family: 'MarkOT-Book';
-  src: url('/assets/fonts/MarkOT-Book.otf') format('truetype');
+  src: url('/fonts/MarkOT-Book.otf') format('truetype');
 }
 
 @font-face {
   font-family: 'MarkOT-Regular';
-  src: url('/assets/fonts/MarkOT-Regular.otf') format('truetype');
+  src: url('/fonts/MarkOT-Regular.otf') format('truetype');
 }
 
 @font-face {
   font-family: 'MarkOT-Thin';
-  src: url('/assets/fonts/MarkOT-Thin.otf') format('truetype');
+  src: url('/fonts/MarkOT-Thin.otf') format('truetype');
 }
 
 

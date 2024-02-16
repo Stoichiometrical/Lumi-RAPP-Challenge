@@ -74,7 +74,7 @@ function App() {
 
             <div className="flex  md:items-center md:justify-center  justify-start px-4">
               <div className="flex flex-col md:w-3/5 gap-3 ">
-                <div className="head text-center">How it works</div>
+                <div className="head text-center ">How it works</div>
                 <div>
                   <div className="font-bold">
                     Lumi’s A, B, Cs, to better Zzzzs

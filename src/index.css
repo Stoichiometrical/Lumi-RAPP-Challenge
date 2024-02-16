@@ -56,6 +56,9 @@
   @apply fbook font-semibold text-4xl text-main_color
 }
 
+.section-default{
+  @apply  flex md:flex-row
+}
 
 
 

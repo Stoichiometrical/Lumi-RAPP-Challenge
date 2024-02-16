@@ -67,7 +67,7 @@ function App() {
             </div>
           </section>
 
-          <section className="flex md:flex-row flex-col">
+          <section className="section-default flex-col">
             <div className="md:w-1/2 w-full p-4 md:p-0">
               <img src={baby} alt="Photo Missing" />
             </div>
@@ -105,7 +105,7 @@ function App() {
             </div>
           </section>
 
-          <section className="flex md:flex-row flex-col-reverse my-6 md:my-0 ">
+          <section className="section-default flex-col-reverse my-6 md:my-0 ">
             <div className="flex md:items-center md:justify-center  px-5">
               <div className="flex flex-col md:items-center justify-center gap-3 mt-4  mb-5">
                 <div className="head text-2xl">Our Mission</div>
@@ -122,7 +122,7 @@ function App() {
             <img src={baby2} alt="Photo Missing" className="md:w-1/2 w-full" />
           </section>
 
-          <section className="flex md:flex-row flex-col ">
+          <section className="section-default flex-col ">
             <img src={baby3} alt="Photo" className=" md:flex md:w-1/2 w-full" />
 
             <div className="flex flex-col md:justify-center md:items-center gap-4 my-5 px-6">

@@ -26,10 +26,6 @@ export default function Navbar() {
             <img src={cart} alt="Cart" />
           </div>
         </div>
-
-        {/*<div className="">*/}
-        {/*  <button className="">GET STARTED</button>*/}
-        {/*</div>*/}
       </div>
     </nav>
   );

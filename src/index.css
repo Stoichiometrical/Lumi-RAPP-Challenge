@@ -5,6 +5,7 @@
 @font-face {
   font-family: 'MarkOT';
   src: url('/fonts/MarkOT.otf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
@@ -30,10 +31,6 @@
 
 :root {
   font-family: 'MarkOT', sans-serif;
-}
-
-.cont{
-  font-family: 'MarkOT-Regular',sans-serif;
 }
 
 .fbold{

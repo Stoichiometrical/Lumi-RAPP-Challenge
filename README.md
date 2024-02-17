@@ -36,6 +36,10 @@ To run the project locally, follow these steps:
 5.Open your browser and visit http://localhost:5173 to view the website.
 
 
+### Performance After Optimization
+![Lumi Pampers Website Screenshot](perfomance.png)
+
+
 ### Technologies Used
 Tailwind CSS for styling
 Vite for creating the React app

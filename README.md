@@ -18,19 +18,19 @@ To run the project locally, follow these steps:
 
 1. Clone the repository:
 
-   ```bash
+   ```
    git clone https://github.com/Stoichiometrical/Lumi-RAPP-Challenge.git
 
 2.Navigate to the project directory:
-    ```bash
+    ```
          cd Lumi-RAPP-Challenge```
 
 3.Install dependencies:
-    ```bash
+    ```
     npm install```
 
 4.Start the development server:
-    ```bash
+    ```
      npm run dev```
 
 5.Open your browser and visit http://localhost:5173 to view the website.
